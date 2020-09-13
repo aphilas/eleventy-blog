@@ -1,0 +1,13 @@
+@import "../components/tag.css";
+
+.post-list > li h2 {
+  margin-bottom: .25em;
+}
+
+.post-list > li p {
+  margin-top: 0;
+}
+
+.post-list > li a {
+  text-decoration: none;
+}

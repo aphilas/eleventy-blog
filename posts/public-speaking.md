@@ -1,5 +1,7 @@
 ---
 title: "Public speaking"
+tag:
+- communication
 ---
 
 # Public speaking

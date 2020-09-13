@@ -1,3 +1,3 @@
-module.exports = {
-  
+module.exports = function(eleventyConfig) {
+  eleventyConfig.setDataDeepMerge(true)
 }

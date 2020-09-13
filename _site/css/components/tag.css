@@ -1,0 +1,12 @@
+.tag {
+  background-color: rgba(200, 200, 200, .2);
+  padding: .25em .75em;
+  border-radius: 5em;
+  color: rgba(50, 50, 50, .8);
+  font-size: small;
+  text-decoration: none;
+}
+
+.tag:hover {
+  text-decoration: underline;
+}
