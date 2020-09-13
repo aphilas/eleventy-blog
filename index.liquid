@@ -1,0 +1,21 @@
+<h1>Heey!</h1>
+
+<p>Welcome to my blog</p>
+
+<h2>Recent posts</h2>
+
+{% assign posts = collections.post | reverse | slice: 0, 2 %}
+
+<ul class="post-list">
+  {% for post in posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+<h2>Stuff to check out</h2>
+
+<p>1984 - George Orwell</p>
+<p>My cat</p>
+{% comment %} <img src="" alt=""> {% endcomment %}
