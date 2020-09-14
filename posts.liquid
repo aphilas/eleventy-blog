@@ -7,9 +7,9 @@ pagination:
 
 <h1>Posts</h1>
 
-{% comment %} {% assign posts = collections.post %} {% endcomment %}
+{% comment %} {% assign posts = collections.post -%} {% endcomment %}
 
-{% include post-list.liquid %}
+{%- include post-list.liquid -%}
 
 <p>
   {% if pagination.href.previous  %}
