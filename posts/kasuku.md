@@ -1,6 +1,6 @@
 ---
 title: Kasuku
-author: Bar'by
+author: barnaby
 tags:
  - birds
  - fly

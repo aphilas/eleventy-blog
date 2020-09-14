@@ -1,24 +1,36 @@
 <ul class="post-list">
   {%- for post in posts %}
     <li>
-        <a href="{{- post.url -}}">
-          <h2>
-          {{- post.data.title -}}
-          </h2>
-        </a>
+      <a href="{{- post.url -}}" class="post-title">
+        <h2>
+        {{- post.data.title -}}
+        </h2>
+      </a>
 
-      <p>
-        {% if post.data.author -%}
-          <span>By {{ post.data.author -}}</span>
-        {%- endif -%}
+      {%- if post.data.extract -%}
+        <p class="extract">{{ post.data.extract }}...</p>
+      {%- endif -%}
 
-        {%- assign tags = post.data.tags -%}
-        {%- for tag in tags %}
-          {%- if tag != "post" -%}
-            <a class="tag" href="/tags/{{- tag -}}">#{{ tag }}</a>
+      {% if post.data.author or post.data.tags.size > 1 or post.data.authors.size > 0 %}
+        <p>
+          {% if post.data.author -%}
+            {%- assign author = authors[post.data.author] -%} 
+
+            {%- if author -%}
+              <span class="author">By {{ author.fname }} {{ author.lname -}} </span>
+            {%- else -%}
+              <span class="author">By {{ post.data.author -}}</span>
+            {%- endif -%}
           {%- endif -%}
-        {%- endfor %}
-      </p>
+
+          {%- assign tags = post.data.tags -%}
+          {%- for tag in tags %}
+            {%- if tag != "post" -%}
+              <a class="tag" href="/tags/{{- tag -}}">#{{ tag }}</a>
+            {%- endif -%}
+          {%- endfor %}
+        </p>
+      {% endif %}
     </li>
   {%- endfor %}
 </ul>

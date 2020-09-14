@@ -1,6 +1,6 @@
 ---
 title: Water
-author: Fire Nation
+author: fire
 tags: 
  - fire
  - water

@@ -5,6 +5,7 @@
   color: rgba(50, 50, 50, .8);
   font-size: small;
   text-decoration: none;
+  margin-right: .25em;
 }
 
 .tag:hover {

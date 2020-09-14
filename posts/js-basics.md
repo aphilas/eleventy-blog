@@ -1,9 +1,10 @@
 ---
 title: Basics of JS
-author: Neville
+author: neville
 tags: 
   - js
   - code
+extract: Learn about the pros and cons of JS
 ---
 
 This are the basics of JS.

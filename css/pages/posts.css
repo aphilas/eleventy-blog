@@ -11,3 +11,11 @@
 .post-list > li a {
   text-decoration: none;
 }
+
+.extract {
+  margin-bottom: .25em;
+}
+
+.author {
+  margin-right: .5em;
+}
