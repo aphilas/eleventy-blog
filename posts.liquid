@@ -1,5 +1,22 @@
+---
+pagination: 
+  data: collections.post
+  size: 3
+  alias: posts
+---
+
 <h1>Posts</h1>
 
-{% assign posts = collections.post %}
+{% comment %} {% assign posts = collections.post %} {% endcomment %}
 
 {% include post-list.liquid %}
+
+<p>
+  {% if pagination.href.previous  %}
+    <a href="{{ pagination.href.previous }}">< Previous Page</a>
+  {% endif %}
+
+  {% if pagination.href.next  %}
+    <a href="{{ pagination.href.next }}">Next Page ></a>
+  {% endif %}
+</p>
