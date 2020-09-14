@@ -6,4 +6,10 @@ pagination:
 permalink: /author/{{ author | url_encode }}/
 ---
 
-<h2>{{- authors[author].fname }} {{ authors[author].lname -}}</h2>
+<h1>{{- authors[author].fname }} {{ authors[author].lname -}}</h1>
+
+<h2>Posts by {{ authors[author].fname -}}</h2>
+
+{% assign posts = collections.post | getPostsByAuthor: author %}
+
+{% include post-list.liquid %}
