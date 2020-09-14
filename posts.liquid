@@ -2,29 +2,4 @@
 
 {% assign posts = collections.post %}
 
-<ul class="post-list">
-  {%- for post in posts %}
-    <li>
-        <a href="{{ post.url }}">
-          <h2>
-          {{ post.data.title }}
-          </h2>
-        </a>
-
-      <p>
-        {% if post.data.author %}
-          <span>By {{ post.data.author }}</span>
-        {% endif %}
-
-        {% assign tags = post.data.tags %}
-        {%- for tag in tags %}
-          {% if tag != "post" %}
-            <a class="tag" href="/tags/{{ tag }}">#{{ tag }}</a>
-          {% endif %}
-        {% endfor %}
-      </p>
-    </li>
-  {% endfor %}
-</ul>
-
-<link rel="stylesheet" href="/css/pages/posts.css">
+{% include post-list.liquid %}
