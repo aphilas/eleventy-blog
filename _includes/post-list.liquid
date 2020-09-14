@@ -11,16 +11,18 @@
         <p class="extract">{{ post.data.extract }}...</p>
       {%- endif -%}
 
-      {% if post.data.author or post.data.tags.size > 1 or post.data.authors.size > 0 %}
+      {% if post.data.author or post.data.tags.size > 1 %}
         <p>
           {% if post.data.author -%}
             {%- assign author = authors[post.data.author] -%} 
 
-            {%- if author -%}
-              <span class="author">By {{ author.fname }} {{ author.lname -}} </span>
-            {%- else -%}
-              <span class="author">By {{ post.data.author -}}</span>
-            {%- endif -%}
+            <a href="/author/{{ post.data.author }}">
+              {%- if author -%}
+                <span class="author">By {{ author.fname }} {{ author.lname -}} </span>
+              {%- else -%}
+                <span class="author">By {{ post.data.author -}}</span>
+              {%- endif -%}
+            </a>
           {%- endif -%}
 
           {%- assign tags = post.data.tags -%}

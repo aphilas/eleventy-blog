@@ -1,0 +1,9 @@
+---
+pagination: 
+  data: authors
+  size: 1
+  alias: author
+permalink: /author/{{ author | url_encode }}/
+---
+
+<h2>{{- authors[author].fname }} {{ authors[author].lname -}}</h2>
