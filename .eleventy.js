@@ -7,4 +7,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("admin")
   
+  eleventyConfig.setTemplateFormats([
+     "liquid", "md", "css", "jpg", "png", "webp" 
+  ])
 }
