@@ -1,3 +1,5 @@
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
 <h1>Heey!</h1>
 
 <p>Welcome to my blog</p>
@@ -13,3 +15,15 @@
 <p>1984 - George Orwell</p>
 <p>My cat</p>
 {% comment %} <img src="" alt=""> {% endcomment %}
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
