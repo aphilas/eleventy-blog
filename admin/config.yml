@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: master
+  repo:  nevilleomangi/eleventy-blog 
 # publish_mode: editorial_workflow
 media_folder: "posts/images"
 collections:
